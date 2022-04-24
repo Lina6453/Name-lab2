@@ -39,7 +39,7 @@ namespace Name2
             Person n = new Person(u);
             Console.WriteLine("Доход=  " + n.Dohod(f).ToString());
             Person t = new Person(u);
-            Console.WriteLine("MaxДоход=  " + t.Dohod(f).ToString());)
+            Console.WriteLine("MaxДоход=  " + t.MaxDohod(f).ToString());)
             Console.ReadKey();
         }
     }
