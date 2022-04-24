@@ -7,6 +7,7 @@ namespace Name2
         private int p;
         string name;
         const double k = 1.5;
+        const double o = 3.5;
         public Person (string nm)
         {
             name = nm;
@@ -18,6 +19,10 @@ namespace Name2
         public int Dohod(int p)
         {
             return Convert.ToInt32(Math.Abs(p * k));
+        }
+        public int MaxDohod (int p)
+        {
+            return Convert.ToInt32(Math.Abs(p * o));
         }
     }
     class Program
@@ -33,6 +38,8 @@ namespace Name2
             Console.WriteLine( "Имя=  " + q.GetName());
             Person n = new Person(u);
             Console.WriteLine("Доход=  " + n.Dohod(f).ToString());
+            Person t = new Person(u);
+            Console.WriteLine("MaxДоход=  " + t.Dohod(f).ToString());)
             Console.ReadKey();
         }
     }
