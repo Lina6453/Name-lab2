@@ -7,10 +7,20 @@ namespace Name2
         private int p;
         string name;
         const double k = 1.5;
+
         const double o = 3.5;
+        string age;
         public Person (string nm)
         {
             name = nm;
+        }
+        public Person (string nb)
+        {
+            age = nb;
+        }
+        public string GetAge()
+        {
+            return age;
         }
         public string GetName()
         {
@@ -34,12 +44,16 @@ namespace Name2
             Console.WriteLine("Введите Минимальный доход");
             string u  = Console.ReadLine();
             int f = Convert.ToInt32(u);
+            Console.WriteLine("Введите возраст");
+            string s = Console.ReadLine();
             Person q = new Person(k);
             Console.WriteLine( "Имя=  " + q.GetName());
             Person n = new Person(u);
             Console.WriteLine("Доход=  " + n.Dohod(f).ToString());
             Person t = new Person(u);
-            Console.WriteLine("MaxДоход=  " + t.MaxDohod(f).ToString());)
+            Console.WriteLine("MaxДоход=  " + t.MaxDohod(f).ToString());
+            Person x = new Person(s);
+            Console.WriteLine("Возраст=" + x.GetAge());
             Console.ReadKey();
         }
     }
